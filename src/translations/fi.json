@@ -1,0 +1,180 @@
+{
+"appBar": {
+  "webkitsas":"WebKitsas",
+  "saldos": "Saldot",
+  "vouchers": "Tositteet",
+  "entries": "Viennit",
+  "job": "Työlista"
+  }, 
+   "cycleList": {
+    "empty": "Sinulla ei ole kierrossa aktiivisia tehtäviä"
+   },
+   "entryList": {
+     "entries": "Viennit",
+     "filter": "Suodata",
+     "date": "Pvm",
+     "account": "Tili",
+     "debet": "Debet",
+     "credit": "Kredit",
+     "sector": "Kohdennus",
+     "partner": "Asiakas/Toimittaja",
+     "subject": "Selite"
+   },
+   "invoiceExtra": {
+      "invoicedate": "Lasku pvm",
+      "duedate": "Eräpäivä",
+      "invoicenr": "Laskun numero",
+      "ref": "Viitenumero",
+      "invalidDate": "Päivämäärä ei kelpaa"
+
+   },
+   "loginForm" : {
+    "title": "Tervetuloa WebKitsaaseen",
+    "instruction": "WebKitsaalla pääset selaamaan Kitsaan pilvipalvelussa olevaa kirjanpitoasi sekä käsittelemään kierrossa olevia laskuja. ",
+    "logininstruction" :"Kirjaudu Kitsaan käyttäjätunnuksellasi",
+    "email": "Sähköpostiosoite",
+    "password": "Salasana",
+    "login": "Kirjaudu",
+    "forgot": "Unohdin salasanan",
+    "forgottitle": "Unohtuneen salasanan vaihtaminen",
+    "forgotinfo": "Anna salasanasi, niin lähetämme sähköpostiisi kertakäyttöisen linkin, jolla voit vaihtaa salasanasi.",
+    "askfor": "Lähetä",
+    "close": "Peru",
+    "loginfailed": "Kirjautuminen epäonnistui. Sähköpostiosoite tai salasana väärin.",
+    "forgotsend": "Salasanan vaihtolinkki on lähetetty sähköpostiisi",
+    "forgotfailed": "Salasanan vaihtopyynnön lähettäminen epäonnistui",
+    "beta": "WebKitsas on vasta otettu käyttöön. WebKitsaassa on vain pieni osa niistä toiminnoista, joita voit tehdä Kitsaan tietokoneversiolla. Anna palautetta palaute@kitsas.fi"
+   },
+   "newFab": {
+     "new": "Uusi tosite"
+   },
+   "newVoucherAttachment": {
+    "dropfailed": "Liitteen lisääminen epäonnistui",
+    "rejected": "Voit liittää enintään 8 megatavun jpeg- ja pdf-tiedostoja",
+    "remove": "Poista liite",
+    "droptext": "Raahaa tähän pdf-tiedosto tai jpeg-kuva"
+   },
+   "newVoucherButtons": {
+      "cancel": "Peru",
+      "draft": "Tallenna luonnoksena",
+      "cycle": "Tallenna kiertoon",
+      "check": "Tallenna tarkastettuna",
+      "accept": "Tallenna hyväksyttynä",
+      "save": "Tallenna valmiina",
+      "saved": "Tosite tallennettu",
+      "savefailed": "Tallentaminen epäonnistui"
+   },
+   "newVoucherExtras": {
+      "info": "Lisätiedot",
+      "comment": "Kommentti",
+      "mark": "Huomiomerkki"      
+   },
+   "newVoucherHeader": {
+     "cycle": "Lisää kiertoon",
+     "cycles": "Kierto",
+     "nocycle": "Ei kiertoa",
+     "type": "Tositetyyppi",
+     "expences": "Kululasku",
+     "outcome": "Menotosite",
+     "income": "Tulotosite",
+     "paymethod": "Maksutapa",
+     "date": "Pvm",
+     "seller": "Toimittaja",
+     "subject": "Otsikko",
+     "customer": "Asiakas",
+     "invoicer": "Laskuttaja",
+     "mindate": "Kirjanpito lukittu {{date}} saakka",
+     "maxdate": "Kirjanpidossa on tilikausia vain {{date}} saakka",
+     "invalidDate": "Päivämäärä ei kelpaa"
+   },
+   "newVoucherRow": {
+     "subject": "Riviselite",
+     "account": "Tili",
+     "sector": "Kohdennus",
+     "euro": "Euroa"
+   },
+   "saldoView": {
+     "saldos": "Saldot",
+     "balance": "Tase",
+     "result": "Tuloslaskelma",
+     "resultTotal": "Tulos yhteensä"
+   },
+   "selectPeriod": {
+     "period": "Tilikausi"
+   },
+   "selectSector": {
+    "sector": "Kohdennus",
+    "allsectors": "Kaikki kohdennukset"
+   },
+   "userInfo": {
+      "logout": "Kirjaudu ulos",
+      "password": "Vaihda salasana"
+   },
+   "voucherComments": {
+     "placeholder": "Lisää kommentti",
+     "button": "Tallenna kommentti",
+     "failed": "Kommentin tallentamienn epäonnistui"
+   },
+   "voucherEntries": {
+    "date": "Pvm",
+    "account": "Tili",
+    "sector": "Kohdennus",
+    "subject": "Selite",
+    "debet": "Debet",
+    "credit": "Kredit"
+   },
+   "voucherList": {
+    "filter": "Suodata"
+   },
+   "voucherHeader": {
+    "marked": "Huomio"
+   },
+   "voucherHeaderButtons": {
+    "check": "Tarkasta",
+    "accept": "Hyväksy",
+    "reject": "Hylkää",
+    "successed": "Kierrossa ollut lasku on nyt",
+    "failed": "Tallentaminen epäonnistui",
+    "edit": "Muokkaa",
+    "book": "Tallenna kirjanpitoon"
+   },   
+   "voucherStatus": {
+    "0": "Poistettu",
+    "5": "Mallipohja",
+    "10": "Hylätty",    
+    "20": "Saapunut",
+    "30": "Tarkastettu",
+    "40": "Hyväksytty",
+    "50": "Luonnos",
+    "60": "Luonnos",
+    "80": "Lähettämättä",    
+    "100": "Kirjanpidossa",
+    "101": "Lähetettävänä",
+    "102": "Lähetysvirhe",
+    "110": "Lähetetty",
+    "113": "Toimitettu",
+    "120": "Muistutettu"
+   },
+   "voucherType": {
+     "0" : "Muu",
+     "90": "Tuonti",
+     "100": "Meno",
+     "110": "Saapunut verkkolasku",
+     "120": "Kululasku",
+     "200": "Tulo",     
+     "210": "Myyntilasku",
+     "214": "Hyvityslasku",
+     "216": "Maksumuistutus",
+     "300": "Siirto",
+     "400": "Tiliote",
+     "500": "Palkka",
+     "700": "Muistio",
+     "800": "Liitetieto",
+     "1000": "Järjestelmä",
+     "9010": "Tilinavaus",
+     "9100": "Alv-laskelma",
+     "9910": "Poistolaskelma",
+     "9920": "Jaksotus",
+     "9930": "Tulovero"
+   }
+ }
