@@ -1,3 +1,5 @@
+import React from "react"
+
 import { useTranslation } from "react-i18next"
 
 import { connect } from "react-redux"
@@ -53,50 +55,50 @@ const VoucherHeaderButtons = (props) => {
     <Grid container alignItems="flex-end" direction="columns-reverse">
       {props.data.tila < Defines.VoucherStatus.Accepted &&
         props.rights.includes("Kh") && (
-          <GreenButton
-            fullWidth
-            variant="contained"
-            startIcon={<DoneAllIcon />}
-            onClick={() => saveToStatus(Defines.VoucherStatus.Accepted)}
-          >
-            {t("accept")}
-          </GreenButton>
-        )}
+        <GreenButton
+          fullWidth
+          variant="contained"
+          startIcon={<DoneAllIcon />}
+          onClick={() => saveToStatus(Defines.VoucherStatus.Accepted)}
+        >
+          {t("accept")}
+        </GreenButton>
+      )}
       {props.data.tila < Defines.VoucherStatus.Checked &&
         props.rights.includes("Kt") && (
-          <YellowButton
-            variant="contained"
-            fullWidth
-            startIcon={<CheckIcon />}
-            onClick={() => saveToStatus(Defines.VoucherStatus.Checked)}
-          >
-            {t("check")}
-          </YellowButton>
-        )}
+        <YellowButton
+          variant="contained"
+          fullWidth
+          startIcon={<CheckIcon />}
+          onClick={() => saveToStatus(Defines.VoucherStatus.Checked)}
+        >
+          {t("check")}
+        </YellowButton>
+      )}
       {props.data.tila >= Defines.VoucherStatus.Received &&
         props.data.tila < Defines.VoucherStatus.Accepted && (
-          <Button
-            fullWidth
-            variant="contained"
-            startIcon={<CloseIcon />}
-            color="secondary"
-            onClick={() => saveToStatus(Defines.VoucherStatus.Rejected)}
-          >
-            {t("reject")}
-          </Button>
-        )}
+        <Button
+          fullWidth
+          variant="contained"
+          startIcon={<CloseIcon />}
+          color="secondary"
+          onClick={() => saveToStatus(Defines.VoucherStatus.Rejected)}
+        >
+          {t("reject")}
+        </Button>
+      )}
 
       {props.data.tila === Defines.VoucherStatus.Accepted &&
         props.rights.includes("Tt") && (
-          <GreenButton
-            fullWidth
-            variant="contained"
-            startIcon={<DoneAllIcon />}
-            onClick={() => saveToStatus(Defines.VoucherStatus.Booked)}
-          >
-            {t("book")}
-          </GreenButton>
-        )}
+        <GreenButton
+          fullWidth
+          variant="contained"
+          startIcon={<DoneAllIcon />}
+          onClick={() => saveToStatus(Defines.VoucherStatus.Booked)}
+        >
+          {t("book")}
+        </GreenButton>
+      )}
 
       {props.rights.includes("Tt") && isEditable(props.data) && (
         <Button

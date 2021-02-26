@@ -205,8 +205,8 @@ const NewVoucherHeader = (props) => {
                     props.newVoucher.type === Defines.VoucherType.Income
                       ? t("customer")
                       : props.newVoucher.type === Defines.VoucherType.Expences
-                      ? t("invoicer")
-                      : t("seller")
+                        ? t("invoicer")
+                        : t("seller")
                   }
                   variant="outlined"
                   value={props.newVoucher.partner}

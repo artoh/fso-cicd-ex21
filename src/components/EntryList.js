@@ -35,12 +35,12 @@ const EntryList = (props) => {
   const filtered =
     filter && filter.length > 0
       ? data.filter(
-          (item) =>
-            (item.selite &&
+        (item) =>
+          (item.selite &&
               item.selite.toLowerCase().includes(filter.toLowerCase())) ||
             (item.kumppani &&
               item.kumppani.nimi.toLowerCase().includes(filter.toLowerCase()))
-        )
+      )
       : data
 
   useEffect(() => {

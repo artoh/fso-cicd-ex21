@@ -9,7 +9,7 @@ import NewVoucherRows from "./NewVoucherRows"
 import NewVoucherExtras from "./NewVoucherExtras"
 import NewVoucherButtons from "./NewVoucherButtons"
 
-const NewVoucher = (props) => {
+const NewVoucher = () => {
   return (
     <Container maxWidth="xl">
       <Grid container spacing={3}>

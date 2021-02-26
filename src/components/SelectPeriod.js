@@ -24,7 +24,7 @@ const SelectPeriod = (props) => {
         onChange={(event) => props.selectPeriod(event.target.value)}
       >
         {props.periods.map((p) => (
-          <MenuItem value={p} id={p.alkaa}>
+          <MenuItem value={p} id={p.alkaa} key={p.alkaa}>
             {dayjs(p.alkaa).format("DD.MM.YYYY") +
               " " +
               dayjs(p.loppuu).format("DD.MM.YYYY")}

@@ -38,7 +38,7 @@ const MyAppBar = (props) => {
 
           {props.current && (
             <div>
-              <div class={classes.menuButton}>
+              <div className={classes.menuButton}>
                 <Button color="inherit" component={Link} to="/saldo">
                   {t("saldos")}
                 </Button>

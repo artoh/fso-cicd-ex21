@@ -62,12 +62,12 @@ const VoucherList = (props) => {
   const filtered =
     filter && filter.length > 0
       ? data.filter(
-          (item) =>
-            (item.otsikko &&
+        (item) =>
+          (item.otsikko &&
               item.otsikko.toLowerCase().includes(filter.toLowerCase())) ||
             (item.kumppani &&
               item.kumppani.toLowerCase().includes(filter.toLowerCase()))
-        )
+      )
       : data
 
   useEffect(() => {

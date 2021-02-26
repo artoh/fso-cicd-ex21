@@ -2,53 +2,53 @@ import cloudService from "../services/cloudService"
 
 const cloudReducer = (store = null, action) => {
   switch (action.type) {
-    case "LOGOUT":
-      return null
-    case "LOGIN":
-      return {
-        login: action.login,
-        current: null,
-        init: null,
-        updated: null,
-        worklist: null,
-        period: null,
-        sector: null,
-      }
-    case "CLOUD":
-      return {
-        ...store,
-        current: action.cloud,
-        init: action.init,
-        worklist: action.worklist,
-        period: action.init.tilikaudet.length
-          ? action.init.tilikaudet[action.init.tilikaudet.length - 1]
-          : null,
-        sector: -1,
-        updated: Date.now(),
-      }
-    case "PERIOD":
-      return {
-        ...store,
-        period: action.period,
-      }
-    case "SECTOR":
-      return {
-        ...store,
-        sector: action.sector,
-      }
-    case "RELOAD":
-      return {
-        ...store,
-        worklist: action.worklist,
-        updated: Date.now(),
-      }
-    case "REFRESH":
-      return {
-        ...store,
-        updated: Date.now(),
-      }
-    default:
-      return store
+  case "LOGOUT":
+    return null
+  case "LOGIN":
+    return {
+      login: action.login,
+      current: null,
+      init: null,
+      updated: null,
+      worklist: null,
+      period: null,
+      sector: null,
+    }
+  case "CLOUD":
+    return {
+      ...store,
+      current: action.cloud,
+      init: action.init,
+      worklist: action.worklist,
+      period: action.init.tilikaudet.length
+        ? action.init.tilikaudet[action.init.tilikaudet.length - 1]
+        : null,
+      sector: -1,
+      updated: Date.now(),
+    }
+  case "PERIOD":
+    return {
+      ...store,
+      period: action.period,
+    }
+  case "SECTOR":
+    return {
+      ...store,
+      sector: action.sector,
+    }
+  case "RELOAD":
+    return {
+      ...store,
+      worklist: action.worklist,
+      updated: Date.now(),
+    }
+  case "REFRESH":
+    return {
+      ...store,
+      updated: Date.now(),
+    }
+  default:
+    return store
   }
 }
 

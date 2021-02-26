@@ -79,8 +79,8 @@ export const makeDocument = (voucher, attachemnts, status, accounts) => {
         row.subject.length > 0
           ? row.subject
           : voucher.subject.length > 0
-          ? voucher.subject
-          : undefined,
+            ? voucher.subject
+            : undefined,
       tyyppi:
         voucher.type === Defines.VoucherType.Income
           ? Defines.VoucherType.Income + Defines.EntryType.Booking

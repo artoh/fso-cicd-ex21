@@ -37,11 +37,11 @@ const CloudListItem = ({ cloud, onSelect }) => {
         const data = Buffer.from(response.data, "binary").toString("base64")
         setImage(data)
       })
-      .catch((e) => {})
+      .catch(() => {})
   }, [cloud])
 
   return (
-    <ListItem onClick={(e) => doSelect(cloud)}>
+    <ListItem onClick={() => doSelect(cloud)}>
       <ListItemAvatar>
         <Avatar
           src={`data:image/png;base64,${image}`}

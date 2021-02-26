@@ -139,7 +139,7 @@ const LoginForm = (props) => {
     </Container>
   )
 }
-const mapStateToProps = (state) => {
+const mapStateToProps = () => {
   return {}
 }
 

@@ -31,7 +31,7 @@ const VoucherLog = ({ log }) => {
         <Table>
           <TableBody>
             {log.map((row) => (
-              <VoucherLogRow row={row} />
+              <VoucherLogRow row={row} key={row.id}/>
             ))}
           </TableBody>
         </Table>

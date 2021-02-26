@@ -75,23 +75,23 @@ const NewVoucherAttachment = (props) => {
           (props.voucher.old.liitteet === undefined ||
             props.voucher.old.liitteet.length === 0) &&
           !inProgress && (
-            <DropzoneAreaBase
-              id="dropzone"
-              acceptedFiles={["image/jpeg", "application/pdf"]}
-              maxFileSize={8338608}
-              onAdd={(newFiles) => drop(newFiles)}
-              showAlerts={["error"]}
-              getDropRejectMessage={() => t("rejected")}
-              dropzoneText={t("droptext")}
-            />
-          )}
+          <DropzoneAreaBase
+            id="dropzone"
+            acceptedFiles={["image/jpeg", "application/pdf"]}
+            maxFileSize={8338608}
+            onAdd={(newFiles) => drop(newFiles)}
+            showAlerts={["error"]}
+            getDropRejectMessage={() => t("rejected")}
+            dropzoneText={t("droptext")}
+          />
+        )}
         {props.voucher.old.liitteet &&
           props.voucher.old.liitteet.map((a) => (
             <VoucherAttachment key={a.id} data={a} />
           ))}
         {props.attachments.map((a) => (
-          <div>
-            <VoucherAttachment key={a.id} data={a} />
+          <div key={a.id}>
+            <VoucherAttachment data={a} />
             <div style={{ float: "right" }}>
               <Button
                 variant="contained"

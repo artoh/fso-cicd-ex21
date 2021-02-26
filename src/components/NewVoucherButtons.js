@@ -92,61 +92,62 @@ const NewVoucherButtons = (props) => {
             {(props.cycle === 0 ||
               oldStatus === Defines.VoucherStatus.Accepted) &&
               props.rights.includes("Tl") && (
+            // eslint-disable-next-line indent
                 <Button
-                  variant="outlined"
-                  style={{ margin: "1em" }}
-                  disabled={dayInvalid}
-                  startIcon={<SaveAltIcon />}
-                  onClick={() => saveVoucher(Defines.VoucherStatus.Draft)}
-                >
-                  {t("draft")}
-                </Button>
-              )}
+                variant="outlined"
+                style={{ margin: "1em" }}
+                disabled={dayInvalid}
+                startIcon={<SaveAltIcon />}
+                onClick={() => saveVoucher(Defines.VoucherStatus.Draft)}
+              >
+                {t("draft")}
+              </Button>
+            )}
           </div>
           <div>
             {props.cycle > 0 &&
               props.rights.includes("Kl") &&
               oldStatus < Defines.VoucherStatus.Received && (
-                <BlueButton
-                  color="primary"
-                  variant="contained"
-                  style={{ margin: "1em" }}
-                  disabled={dayInvalid}
-                  startIcon={<SendIcon />}
-                  onClick={() => saveVoucher(Defines.VoucherStatus.Received)}
-                >
-                  {t("cycle")}
-                </BlueButton>
-              )}
+              <BlueButton
+                color="primary"
+                variant="contained"
+                style={{ margin: "1em" }}
+                disabled={dayInvalid}
+                startIcon={<SendIcon />}
+                onClick={() => saveVoucher(Defines.VoucherStatus.Received)}
+              >
+                {t("cycle")}
+              </BlueButton>
+            )}
 
             {props.cycle > 0 &&
               props.rights.includes("Kt") &&
               oldStatus < Defines.VoucherStatus.Checked && (
-                <YellowButton
-                  variant="contained"
-                  style={{
-                    margin: "1em",
-                  }}
-                  color="secondary"
-                  startIcon={<CheckIcon />}
-                  disabled={dayInvalid}
-                  onClick={() => saveVoucher(Defines.VoucherStatus.Checked)}
-                >
-                  {t("check")}
-                </YellowButton>
-              )}
+              <YellowButton
+                variant="contained"
+                style={{
+                  margin: "1em",
+                }}
+                color="secondary"
+                startIcon={<CheckIcon />}
+                disabled={dayInvalid}
+                onClick={() => saveVoucher(Defines.VoucherStatus.Checked)}
+              >
+                {t("check")}
+              </YellowButton>
+            )}
             {props.cycle > 0 &&
               props.rights.includes("Kh") &&
               oldStatus < Defines.VoucherStatus.Accepted && (
-                <GreenButton
-                  variant="contained"
-                  disabled={dayInvalid}
-                  startIcon={<DoneAllIcon />}
-                  onClick={() => saveVoucher(Defines.VoucherStatus.Accepted)}
-                >
-                  {t("accept")}
-                </GreenButton>
-              )}
+              <GreenButton
+                variant="contained"
+                disabled={dayInvalid}
+                startIcon={<DoneAllIcon />}
+                onClick={() => saveVoucher(Defines.VoucherStatus.Accepted)}
+              >
+                {t("accept")}
+              </GreenButton>
+            )}
             {props.rights.includes("Tt") && (
               <GreenButton
                 variant="contained"

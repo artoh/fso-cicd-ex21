@@ -3,31 +3,31 @@ import { loadDocument } from "../utils/makeDocument"
 
 const newVoucherReducer = (store = null, action) => {
   switch (action.type) {
-    case Defines.ReducerActions.ResetNew:
-    case Defines.ReducerActions.Cloud:
-      return {
-        date: new Date(),
-        cycle: 0,
-        type: 100,
-        contraAccount: 1910,
-        partner: "",
-        subject: "",
-        rows: [{ subject: "", account: 4000, sector: 0, euro: "0.0" }],
-        invoicedate: new Date(),
-        duedate: null,
-        invoicenr: "",
-        ref: "",
-        info: "",
-        comment: "",
-        mark: false,
-        old: {},
-      }
-    case Defines.ReducerActions.SetNewField:
-      return { ...store, ...action.data }
-    case Defines.ReducerActions.EditVoucher:
-      return action.data
-    default:
-      return store
+  case Defines.ReducerActions.ResetNew:
+  case Defines.ReducerActions.Cloud:
+    return {
+      date: new Date(),
+      cycle: 0,
+      type: 100,
+      contraAccount: 1910,
+      partner: "",
+      subject: "",
+      rows: [{ subject: "", account: 4000, sector: 0, euro: "0.0" }],
+      invoicedate: new Date(),
+      duedate: null,
+      invoicenr: "",
+      ref: "",
+      info: "",
+      comment: "",
+      mark: false,
+      old: {},
+    }
+  case Defines.ReducerActions.SetNewField:
+    return { ...store, ...action.data }
+  case Defines.ReducerActions.EditVoucher:
+    return action.data
+  default:
+    return store
   }
 }
 

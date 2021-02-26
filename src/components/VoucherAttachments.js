@@ -37,7 +37,7 @@ const PdfAttachment = ({ id }) => {
       {Array.apply(null, Array(numPages))
         .map((x, i) => i + 1)
         .map((page) => (
-          <Paper>
+          <Paper key={page}>
             <PdfWrapper>
               <Page pageNumber={page} scale={2} key={page} />
             </PdfWrapper>
