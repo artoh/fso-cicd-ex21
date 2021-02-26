@@ -3,7 +3,7 @@ const app = express()
 const proxy = require("express-http-proxy")
 
 // Heroku dynamically sets a port
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5050
 
 app.use(express.static("dist"))
 
