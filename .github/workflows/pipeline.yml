@@ -42,3 +42,4 @@ jobs:
           heroku_email: "arto.hyvattinen@gmail.com"
           healthcheck: "https://fsokitsas.herokuapp.com/health"
           rollbackonhealthcheckfailed: true
+          branch: main
