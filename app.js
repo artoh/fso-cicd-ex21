@@ -11,6 +11,9 @@ app.get("/health", (req, res) => {
   res.send("ok")
 })
 
+// We have backend with some micro services
+// running at our own server, so we have
+// here only a proxy
 app.use("/", proxy("https://pilvi.kitsas.fi"))
 
 app.listen(PORT, () => {
