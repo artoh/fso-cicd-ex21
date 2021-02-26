@@ -43,3 +43,9 @@ jobs:
           healthcheck: "https://fsokitsas.herokuapp.com/health"
           rollbackonhealthcheckfailed: true
           branch: main
+      - name: Bump version and push tag
+        uses: anothrNick/github-tag-action@1.33.0
+        env:
+          COMMIT_MESSAGES: ${{ join(toJson(github.event.commits.*.message)) }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: ${{ contains(env.COMMIT_MESSAGES,'#skip') == false && github.event_name == 'push' }}
