@@ -103,7 +103,11 @@ const LoginForm = (props) => {
             >
               {t("login")}
             </Button>
-            <Button onClick={() => setForgetOpen(true)}>{t("forgot")}</Button>
+            <Button
+              color={password.length === 0 ? "primary" : "default"}
+              variant={password.length === 0 ? "contained" : "text"}
+              onClick={() => setForgetOpen(true)}
+            >{t("forgot")}</Button>
             <Dialog
               open={forgetOpen}
               onClose={setForgetOpen}
